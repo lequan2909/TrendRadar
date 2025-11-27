@@ -1,0 +1,40 @@
+# === Python Virtual Environment ===
+venv/
+env/
+ENV/
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# === Environment Variables ===
+.env
+.env.local
+
+# === Output & Data ===
+output/
+*.log
+
+# === OS ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === IDE ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# === Node.js (cho newsnow) ===
+node_modules/
+.pnpm-store/
+dist/
+build/
+
+# === Temporary ===
+*.tmp
+*.temp
+*.bak
+*.backup

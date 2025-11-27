@@ -1,0 +1,91 @@
+app:
+  version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version"
+  show_version_update: true
+
+crawler:
+  request_interval: 1000
+  enable_crawler: true
+  use_proxy: false
+  default_proxy: "http://127.0.0.1:10086"
+
+report:
+  mode: "incremental"  # Chỉ nhận tin MỚI, không lặp lại
+  rank_threshold: 5
+  sort_by_position_first: false
+  max_news_per_keyword: 0
+
+notification:
+  enable_notification: true
+  message_batch_size: 4000
+  dingtalk_batch_size: 20000
+  feishu_batch_size: 29000
+  batch_send_interval: 3
+  feishu_message_separator: "━━━━━━━━━━━━━━━━━━━"
+
+  push_window:
+    enabled: true  # Bật cửa sổ thời gian
+    time_range:
+      start: "08:00"  # 8 giờ sáng
+      end: "22:00"    # 10 giờ tối
+    once_per_day: false  # Nhận nhiều lần khi có tin mới
+    push_record_retention_days: 7
+
+  webhooks:
+    feishu_url: ""
+    dingtalk_url: ""
+    wework_url: ""
+    wework_msg_type: "markdown"
+    telegram_bot_token: ""  # Điền vào GitHub Secrets
+    telegram_chat_id: ""    # Điền vào GitHub Secrets
+    email_from: ""
+    email_password: ""
+    email_to: ""
+    email_smtp_server: ""
+    email_smtp_port: ""
+    ntfy_server_url: "https://ntfy.sh"
+    ntfy_topic: ""
+    ntfy_token: ""
+
+weight:
+  rank_weight: 0.6
+  frequency_weight: 0.3
+  hotness_weight: 0.1
+
+# === CẤU HÌNH TỐI ƯU CHO TIN VIỆT NAM & ĐẦU TƯ QUỐC TẾ ===
+platforms:
+  # === TÀI CHÍNH QUỐC TẾ (Ưu tiên cao) ===
+  - id: "wallstreetcn-hot"
+    name: "华尔街见闻 (Tin hot)"
+  
+  - id: "jin10"
+    name: "金十数据 (Tài chính)"
+  
+  - id: "xueqiu-hotstock"
+    name: "雪球 (Chứng khoán)"
+  
+  - id: "cls-hot"
+    name: "财联社 (Tin nóng)"
+  
+  # === TIN TỨC QUỐC TẾ ===
+  - id: "zaobao"
+    name: "联合早报 (Singapore)"
+  
+  - id: "cankaoxiaoxi"
+    name: "参考消息 (Quốc tế)"
+  
+  # === CÔNG NGHỆ QUỐC TẾ ===
+  - id: "hackernews"
+    name: "Hacker News"
+  
+  - id: "github-trending-today"
+    name: "Github Trending"
+  
+  # === TIN TỨC TRUNG QUỐC (Có tin về VN) ===
+  - id: "toutiao"
+    name: "今日头条"
+  
+  - id: "baidu"
+    name: "百度热搜"
+  
+  - id: "thepaper"
+    name: "澎湃新闻"

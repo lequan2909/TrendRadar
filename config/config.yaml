@@ -1,66 +1,66 @@
 app:
   version_check_url: "https://raw.githubusercontent.com/sansan0/TrendRadar/refs/heads/master/version"
-  show_version_update: true # 控制显示版本更新提示，如果 false，则不接受新版本提示
+  show_version_update: true # Kiểm soát hiển thị thông báo phiên bản mới, nếu false thì không hiển thị
 
 crawler:
-  request_interval: 1000 # 请求间隔(毫秒)
-  enable_crawler: true # 是否启用爬取新闻功能，如果 false，则直接停止程序
-  use_proxy: false # 是否启用代理，false 时为关闭
+  request_interval: 1000 # Khoảng cách giữa các request (mili giây)
+  enable_crawler: true # Bật/tắt chức năng thu thập tin tức, nếu false thì dừng chương trình
+  use_proxy: false # Bật/tắt sử dụng proxy, false = tắt
   default_proxy: "http://127.0.0.1:10086"
 
-# 🔸 daily（当日汇总模式）
-#   • 推送时机：按时推送(默认每小时推送一次)
-#   • 显示内容：当日所有匹配新闻 + 新增新闻区域
-#   • 适用场景：日报总结、全面了解当日热点趋势
+# 🔸 daily (Chế độ tổng hợp theo ngày)
+#   • Thời điểm đẩy tin: Đẩy theo thời gian (mặc định mỗi giờ 1 lần)
+#   • Nội dung hiển thị: Tất cả tin phù hợp trong ngày + khu vực tin mới
+#   • Phù hợp với: Báo cáo hàng ngày, nắm toàn diện xu hướng trong ngày
 #
-# 🔸 current（当前榜单模式）
-#   • 推送时机：按时推送(默认每小时推送一次)
-#   • 显示内容：当前榜单匹配新闻 + 新增新闻区域
-#   • 适用场景：实时热点追踪、了解当前最火的内容
+# 🔸 current (Chế độ bảng xếp hạng hiện tại)
+#   • Thời điểm đẩy tin: Đẩy theo thời gian (mặc định mỗi giờ 1 lần)
+#   • Nội dung hiển thị: Tin phù hợp trên bảng xếp hạng hiện tại + khu vực tin mới
+#   • Phù hợp với: Theo dõi xu hướng real-time, hiểu nội dung hot nhất hiện tại
 #
-# 🔸 incremental（增量监控模式）
-#   • 推送时机：有新增才推送
-#   • 显示内容：新出现的匹配频率词新闻
-#   • 适用场景：避免重复信息干扰
+# 🔸 incremental (Chế độ giám sát tăng trưởng)
+#   • Thời điểm đẩy tin: Chỉ đẩy khi có tin mới
+#   • Nội dung hiển thị: Tin mới xuất hiện phù hợp với từ khóa
+#   • Phù hợp với: Tránh thông tin lặp lại gây nhiễu
 
-# 推送模式选择
+# Lựa chọn chế độ báo cáo
 report:
-  mode: "daily" # 可选: "daily"|"incremental"|"current"
-  rank_threshold: 5 # 排名高亮阈值
-  sort_by_position_first: false # 排序优先级：true=先按配置位置排序，false=先按热点条数排序
-  max_news_per_keyword: 0 # 每个关键词最大显示数量，0=不限制
+  mode: "daily" # Lựa chọn: "daily"|"incremental"|"current"
+  rank_threshold: 5 # Ngưỡng làm nổi bật tin quan trọng (highlight)
+  sort_by_position_first: false # Ưu tiên sắp xếp: true=theo thứ tự cấu hình, false=theo số lượng tin hot
+  max_news_per_keyword: 0 # Số lượng tin tối đa mỗi từ khóa, 0=không giới hạn
 
 notification:
-  enable_notification: true # 是否启用通知功能，如果 false，则不发送手机通知
-  message_batch_size: 4000 # 消息分批大小（字节）(这个配置别动)
-  dingtalk_batch_size: 20000 # 钉钉消息分批大小（字节）(这个配置也别动)
-  feishu_batch_size: 29000 # 飞书消息分批大小（字节）
-  batch_send_interval: 3 # 批次发送间隔（秒）
-  feishu_message_separator: "━━━━━━━━━━━━━━━━━━━" # feishu 消息分割线
+  enable_notification: true # Bật/tắt chức năng thông báo, nếu false thì không gửi thông báo đến điện thoại
+  message_batch_size: 4000 # Kích thước batch tin nhắn (byte) (không nên thay đổi)
+  dingtalk_batch_size: 20000 # Kích thước batch tin nhắn DingTalk (byte) (không nên thay đổi)
+  feishu_batch_size: 29000 # Kích thước batch tin nhắn Feishu (byte)
+  batch_send_interval: 3 # Khoảng cách gửi giữa các batch (giây)
+  feishu_message_separator: "━━━━━━━━━━━━━━━━━━━" # Đường phân cách tin nhắn Feishu
 
-  # 🕐 推送时间窗口控制（可选功能）
-  # 用途：限制推送的时间范围，避免非工作时间打扰
-  # 适用场景：
-  #   - 只想在工作日白天接收推送（如 09:00-18:00）
-  #   - 希望在晚上固定时间收到汇总（如 20:00-22:00）
+  # 🕐 Kiểm soát cửa sổ thời gian đẩy tin (tính năng tùy chọn)
+  # Mục đích: Giới hạn khung giờ đẩy tin, tránh làm phiền ngoài giờ làm việc
+  # Phù hợp với:
+  #   - Chỉ muốn nhận tin trong giờ làm việc (ví dụ: 09:00-18:00)
+  #   - Muốn nhận tổng hợp vào giờ cố định buổi tối (ví dụ: 20:00-22:00)
   push_window:
-    enabled: false  # 是否启用推送时间窗口控制，默认关闭
-    # 注意：GitHub Actions 执行时间不稳定，时间范围建议至少留足 2 小时
-    # 如果想要精准的定时推送，建议使用 Docker 部署在个人服务器上
+    enabled: false  # Bật/tắt kiểm soát cửa sổ thời gian đẩy tin, mặc định tắt
+    # Lưu ý: GitHub Actions thời gian chạy không ổn định, nên để khoảng thời gian ít nhất 2 tiếng
+    # Nếu muốn đẩy tin chính xác theo giờ, khuyến nghị dùng Docker triển khai trên server cá nhân
     time_range:
-      start: "20:00"  # 推送时间窗口开始（北京时间）
-      end: "22:00"    # 推送时间窗口结束（北京时间）
-    once_per_day: true  # 每天在时间窗口内只推送一次，如果 false，则窗口内每次执行都推送
-    push_record_retention_days: 7  # 推送记录保留天数
+      start: "20:00"  # Thời gian bắt đầu cửa sổ đẩy tin (múi giờ Bắc Kinh/Việt Nam GMT+7)
+      end: "22:00"    # Thời gian kết thúc cửa sổ đẩy tin (múi giờ Bắc Kinh/Việt Nam GMT+7)
+    once_per_day: true  # Mỗi ngày chỉ đẩy 1 lần trong cửa sổ thời gian, nếu false thì mỗi lần chạy trong cửa sổ đều đẩy
+    push_record_retention_days: 7  # Số ngày lưu giữ bản ghi đẩy tin
 
-  # ⚠️⚠️⚠️ 重要安全警告 / IMPORTANT SECURITY WARNING ⚠️⚠️⚠️
+  # ⚠️⚠️⚠️ CẢNH BÁO BẢO MẬT QUAN TRỌNG / IMPORTANT SECURITY WARNING ⚠️⚠️⚠️
   #
-  # 🔴 请务必妥善保管好 webhooks，不要公开!!!
-  # 🔴 如果你以 fork 的方式将本项目部署在 GitHub 上，请勿在下面填写任何 webhooks
-  # 🔴 而是将 webhooks 填入 GitHub Secret（Settings → Secrets and variables → Actions）
-  # 🔴 否则：
-  #    - 轻则：手机上收到大量垃圾广告推送
-  #    - 重则：webhook 被滥用造成严重安全隐患（如恶意消息轰炸、钓鱼链接等）
+  # 🔴 Vui lòng bảo quản webhook cẩn thận, KHÔNG công khai!!!
+  # 🔴 Nếu bạn triển khai dự án bằng cách fork trên GitHub, KHÔNG điền webhook ở phía dưới
+  # 🔴 Mà hãy điền webhook vào GitHub Secret (Settings → Secrets and variables → Actions)
+  # 🔴 Nếu không:
+  #    - Nhẹ: Nhận rất nhiều tin nhắn rác quảng cáo trên điện thoại
+  #    - Nặng: Webhook bị lạm dụng gây ra sự cố bảo mật nghiêm trọng (như tin nhắn độc hại, link lừa đảo, v.v.)
   #
   # 🔴 NEVER expose webhooks publicly!!!
   # 🔴 If deploying via GitHub fork, DO NOT fill webhooks below
@@ -70,28 +70,28 @@ notification:
   #    - Severe: Webhook abuse leading to security incidents (malicious messages, phishing links, etc.)
   #
   webhooks:
-    feishu_url: "" # 飞书机器人的 webhook URL
-    dingtalk_url: "" # 钉钉机器人的 webhook URL
-    wework_url: "" # 企业微信机器人的 webhook URL
-    wework_msg_type: "markdown" # 企业微信消息类型：markdown(群机器人) 或 text(个人微信应用)
+    feishu_url: "" # Webhook URL của robot Feishu
+    dingtalk_url: "" # Webhook URL của robot DingTalk
+    wework_url: "" # Webhook URL của robot WeChat Work (企业微信)
+    wework_msg_type: "markdown" # Loại tin nhắn WeChat Work: markdown(robot nhóm) hoặc text(ứng dụng cá nhân)
     telegram_bot_token: "" # Telegram Bot Token
     telegram_chat_id: "" # Telegram Chat ID
-    email_from: "" # 发件人邮箱地址
-    email_password: "" # 发件人邮箱密码或授权码
-    email_to: "" # 收件人邮箱地址，多个收件人用逗号分隔
-    email_smtp_server: "" # SMTP服务器地址（可选，留空自动识别）
-    email_smtp_port: "" # SMTP端口（可选，留空自动识别）
-    ntfy_server_url: "https://ntfy.sh" # ntfy服务器地址，默认使用公共服务，可改为自托管地址
-    ntfy_topic: "" # ntfy主题名称
-    ntfy_token: "" # ntfy访问令牌（可选，用于私有主题）
+    email_from: "" # Địa chỉ email người gửi
+    email_password: "" # Mật khẩu email hoặc mã ủy quyền (App Password)
+    email_to: "" # Địa chỉ email người nhận, nhiều người nhận cách nhau bằng dấu phẩy
+    email_smtp_server: "" # Địa chỉ SMTP server (tùy chọn, để trống sẽ tự động nhận diện)
+    email_smtp_port: "" # Cổng SMTP (tùy chọn, để trống sẽ tự động nhận diện)
+    ntfy_server_url: "https://ntfy.sh" # Địa chỉ server ntfy, mặc định dùng dịch vụ công cộng, có thể đổi thành địa chỉ self-hosted
+    ntfy_topic: "" # Tên topic ntfy
+    ntfy_token: "" # Token truy cập ntfy (tùy chọn, dùng cho topic riêng tư)
 
-# 用于让关注度更高的新闻在更前面显示，即用算法重新组合不同平台的热搜排序形成你侧重的热搜，合起来是 1 就行
+# Dùng để tin tức có độ quan tâm cao hơn hiển thị phía trước, tức dùng thuật toán sắp xếp lại hot search từ các nền tảng khác nhau theo trọng số bạn quan tâm, tổng cộng bằng 1 là được
 weight:
-  rank_weight: 0.6 # 排名权重
-  frequency_weight: 0.3 # 频次权重
-  hotness_weight: 0.1 # 热度权重
+  rank_weight: 0.6 # Trọng số xếp hạng (60%)
+  frequency_weight: 0.3 # Trọng số tần suất xuất hiện (30%)
+  hotness_weight: 0.1 # Trọng số độ hot (10%)
 
-# name 可以定义任意名称，只具有显示作用，即使项目运行了几天后，忽然改掉 name 也不会影响代码的正常运行
+# name có thể đặt tên tùy ý, chỉ có tác dụng hiển thị, ngay cả khi dự án chạy vài ngày rồi mà đột nhiên đổi name cũng không ảnh hưởng đến hoạt động của code
 platforms:
   - id: "toutiao"
     name: "今日头条"
@@ -115,3 +115,7 @@ platforms:
     name: "抖音"
   - id: "zhihu"
     name: "知乎"
+  - id: "vnexpress"
+    name: "VnExpress"
+  - id: "tuoitre"
+    name: "Tuổi Trẻ"

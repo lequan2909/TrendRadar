@@ -1,4 +1,12 @@
 # coding=utf-8
+# -*- coding: utf-8 -*-
+import sys
+import io
+
+# Fix encoding for Windows console
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
 import json
 import os
@@ -18,6 +26,10 @@ from typing import Dict, List, Tuple, Optional, Union
 import pytz
 import requests
 import yaml
+from dotenv import load_dotenv
+
+# Load biến môi trường từ file .env
+load_dotenv()
 
 
 VERSION = "3.2.0"
@@ -239,12 +251,14 @@ def get_beijing_time():
 
 def format_date_folder():
     """格式化日期文件夹"""
-    return get_beijing_time().strftime("%Y年%m月%d日")
+    # Dùng format không có ký tự đặc biệt để tránh lỗi encoding
+    return get_beijing_time().strftime("%Y-%m-%d")
 
 
 def format_time_filename():
     """格式化时间文件名"""
-    return get_beijing_time().strftime("%H时%M分")
+    # Dùng format không có ký tự đặc biệt để tránh lỗi encoding
+    return get_beijing_time().strftime("%H-%M")
 
 
 def clean_title(title: str) -> str:
@@ -464,7 +478,7 @@ class DataFetcher:
             id_value = id_info
             alias = id_value
 
-        url = f"https://newsnow.busiyi.world/api/s?id={id_value}&latest"
+        url = f"http://localhost:5173/api/s?id={id_value}&latest"
 
         proxies = None
         if self.proxy_url:
