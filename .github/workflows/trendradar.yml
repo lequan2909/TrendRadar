@@ -30,6 +30,7 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          NEWSNOW_API_URL: ${{ secrets.NEWSNOW_API_URL }}
           REPORT_MODE: incremental # Chỉ gửi tin mới
           ENABLE_CRAWLER: true
           ENABLE_NOTIFICATION: true
