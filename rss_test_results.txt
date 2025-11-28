@@ -1,0 +1,70 @@
+============================================================
+RSS Feed Testing for Vietnamese News Sources
+============================================================
+
+============================================================
+Testing: zingnews
+URL: https://znews.vn/rss
+============================================================
+Status Code: 403
+Γ£ù HTTP Error: 403
+
+============================================================
+Testing: cafef
+URL: https://cafef.vn/trang-chu.rss
+============================================================
+Status Code: 404
+Γ£ù HTTP Error: 404
+
+============================================================
+Testing: genk
+URL: https://genk.vn/rss/tin-moi-nhat.rss
+============================================================
+Status Code: 500
+Γ£ù HTTP Error: 500
+
+============================================================
+Testing: dantri
+URL: https://dansinh.dantri.com.vn/rss.htm
+============================================================
+Status Code: 200
+Γ£ù XML Parse Error: undefined entity: line 1, column 128886
+Response preview: <!DOCTYPE html><html lang="vi"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/4fb99c1cc5cae633-s.p.woff
+
+============================================================
+Testing: vietnamfinance
+URL: https://vietnamfinance.vn/rss
+============================================================
+Status Code: 404
+Γ£ù HTTP Error: 404
+
+============================================================
+Testing: vnreview
+URL: https://vnreview.vn/rss
+============================================================
+Status Code: 404
+Γ£ù HTTP Error: 404
+
+
+============================================================
+SUMMARY
+============================================================
+Γ£ù zingnews             - HTTP 403
+Γ£ù cafef                - HTTP 404
+Γ£ù genk                 - HTTP 500
+Γ£ù dantri               - XML Parse Error: undefined entity: line 1, column 128886
+Γ£ù vietnamfinance       - HTTP 404
+Γ£ù vnreview             - HTTP 404
+
+============================================================
+Working: 0/6
+Broken: 6/6
+
+Broken sources need fixing:
+  - zingnews: HTTP 403
+  - cafef: HTTP 404
+  - genk: HTTP 500
+  - dantri: XML Parse Error: undefined entity: line 1, column 128886
+  - vietnamfinance: HTTP 404
+  - vnreview: HTTP 404
+============================================================

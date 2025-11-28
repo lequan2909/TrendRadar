@@ -1,0 +1,99 @@
+============================================================
+NewsNow Local Test - Fixed Sources
+============================================================
+Base URL: http://localhost:5173/api
+Sources to test: 6
+
+Waiting 8 seconds for dev server to start...
+
+============================================================
+Testing: Zing News (zingnews)
+URL: http://localhost:5173/api/s?id=zingnews&latest
+============================================================
+Γ£ù HTTP Error: 500
+Response: {
+  "error": true,
+  "url": "http://localhost:5173/api/s?id=zingnews&latest",
+  "statusCode": 500,
+  "statusMessage": "Server Error",
+  "message": "[GET] \"https://zingnews.vn/rss\": 403 Forbidden",
+ 
+
+============================================================
+Testing: CafeF T├ái ch├¡nh (cafef)
+URL: http://localhost:5173/api/s?id=cafef&latest
+============================================================
+Γ£ô Status: success
+Γ£ô Items count: 0
+Γ£ù No items returned
+
+============================================================
+Testing: Genk Tech (genk)
+URL: http://localhost:5173/api/s?id=genk&latest
+============================================================
+Γ£ô Status: success
+Γ£ô Items count: 30
+
+First item:
+  Title: ≡ƒÆ╗ Tß╗½ Li├¬n minh b├ín dß║½n, Viß╗çt Nam ─æß╗⌐ng tr╞░ß╗¢c c╞í hß╗Öi v╞░╞ín l├¬n th├ánh ─æiß╗âm ─æß║┐n chiß║┐n...
+  URL: https://genk.vn/tu-lien-minh-ban-dan-viet-nam-dung-truoc-co-hoi-vuon-len-thanh-d...
+  PubDate: 1764315120000
+
+============================================================
+Testing: D├ón Tr├¡ (dantri)
+URL: http://localhost:5173/api/s?id=dantri&latest
+============================================================
+Γ£ù HTTP Error: 500
+Response: {
+  "error": true,
+  "url": "http://localhost:5173/api/s?id=dantri&latest",
+  "statusCode": 500,
+  "statusMessage": "Server Error",
+  "message": "[GET] \"https://dantri.com.vn/thoi-su.rss\": 404 Not F
+
+============================================================
+Testing: Vietnam Finance (vietnamfinance)
+URL: http://localhost:5173/api/s?id=vietnamfinance&latest
+============================================================
+Γ£ù HTTP Error: 500
+Response: {
+  "error": true,
+  "url": "http://localhost:5173/api/s?id=vietnamfinance&latest",
+  "statusCode": 500,
+  "statusMessage": "Server Error",
+  "message": "[GET] \"https://vietnamfinance.vn/rss\": 404 N
+
+============================================================
+Testing: VNReview Tech (vnreview)
+URL: http://localhost:5173/api/s?id=vnreview&latest
+============================================================
+Γ£ù HTTP Error: 500
+Response: {
+  "error": true,
+  "url": "http://localhost:5173/api/s?id=vnreview&latest",
+  "statusCode": 500,
+  "statusMessage": "Server Error",
+  "message": "[GET] \"http://vnreview.vn/feed/-/rss/home\": 404 No
+
+
+============================================================
+SUMMARY
+============================================================
+Γ£ù Zing News            - 0 items
+Γ£ù CafeF T├ái ch├¡nh      - 0 items
+Γ£ô Genk Tech            - 30 items
+Γ£ù D├ón Tr├¡              - 0 items
+Γ£ù Vietnam Finance      - 0 items
+Γ£ù VNReview Tech        - 0 items
+
+============================================================
+Working: 1/6
+Broken: 5/6
+
+Broken sources:
+  - zingnews
+  - cafef
+  - dantri
+  - vietnamfinance
+  - vnreview
+============================================================

@@ -1,0 +1,173 @@
+======================================================================
+TEST NGUß╗ÆN TIN NEWSNOW - Kiß╗âm tra nhanh
+======================================================================
+─Éang test 91 nguß╗ôn...
+
+Γ¥î  1. 24h                       - Lß╗ûI (HTTP_500)
+Γ¥î  2. _36kr                     - Lß╗ûI (HTTP_500)
+ΓÜá∩╕Å   3. aljazeera                 - 0 tin
+Γ£à  4. anonyviet                 -  30 tin
+Γ¥î  5. apnews                    - Lß╗ûI (FAIL)
+Γ£à  6. arstechnica               -  20 tin
+Γ¥î  7. baidu                     - Lß╗ûI (HTTP_500)
+Γ¥î  8. bangkokpost               - Lß╗ûI (HTTP_500)
+ΓÜá∩╕Å   9. baomoi                    - 0 tin
+Γ£à 10. bbcnews                   -  30 tin
+Γ£à 11. bbcvietnamese             -  26 tin
+Γ¥î 12. bilibili                  - Lß╗ûI (HTTP_500)
+Γ¥î 13. bloomberg                 - Lß╗ûI (HTTP_500)
+ΓÜá∩╕Å  14. cafef                     - 0 tin
+Γ¥î 15. cankaoxiaoxi              - Lß╗ûI (HTTP_500)
+Γ¥î 16. chongbuluo                - Lß╗ûI (HTTP_500)
+ΓÜá∩╕Å  17. cna                       - 0 tin
+Γ£à 18. cnet                      -  25 tin
+Γ£à 19. cnn                       -  30 tin
+Γ£à 20. coolapk                   -  20 tin
+Γ¥î 21. dantri                    - Lß╗ûI (HTTP_500)
+Γ¥î 22. douyin                    - Lß╗ûI (HTTP_500)
+Γ£à 23. engadget                  -  30 tin
+Γ¥î 24. fastbull                  - Lß╗ûI (HTTP_500)
+Γ¥î 25. gelonghui                 - Lß╗ûI (HTTP_500)
+Γ£à 26. genk                      -  30 tin
+Γ¥î 27. ghxi                      - Lß╗ûI (HTTP_500)
+Γ£à 28. github                    -  18 tin
+Γ£à 29. hackernews                -  30 tin
+Γ¥î 30. hupu                      - Lß╗ûI (HTTP_500)
+ΓÜá∩╕Å  31. ictnews                   - 0 tin
+Γ¥î 32. ifeng                     - Lß╗ûI (HTTP_500)
+Γ£à 33. ithome                    -  30 tin
+Γ¥î 34. jin10                     - Lß╗ûI (HTTP_500)
+Γ£à 35. juejin                    -  30 tin
+Γ¥î 36. kaopu                     - Lß╗ûI (HTTP_500)
+Γ¥î 37. kenh14                    - Lß╗ûI (HTTP_500)
+Γ£à 38. kuaishou                  -  30 tin
+ΓÜá∩╕Å  39. laodong                   - 0 tin
+Γ£à 40. lemmy                     -  30 tin
+Γ¥î 41. linuxdo                   - Lß╗ûI (HTTP_500)
+ΓÜá∩╕Å  42. lobsters                  - 0 tin
+Γ£à 43. luatkhoa                  -  30 tin
+Γ¥î 44. mktnews                   - Lß╗ûI (HTTP_500)
+Γ£à 45. nld                       -  30 tin
+Γ¥î 46. nowcoder                  - Lß╗ûI (HTTP_500)
+Γ£à 47. pcbeta                    -  20 tin
+Γ£à 48. plo                       -  30 tin
+Γ¥î 49. producthunt               - Lß╗ûI (HTTP_500)
+Γ£à 50. reddit-geopolitics        -  30 tin
+Γ£à 51. reddit-programming        -  30 tin
+Γ£à 52. reddit-science            -  30 tin
+Γ£à 53. reddit-technology         -  30 tin
+Γ£à 54. reddit-worldnews          -  30 tin
+Γ£à 55. redditvietnam             -  25 tin
+Γ¥î 56. reuters                   - Lß╗ûI (FAIL)
+Γ¥î 57. rfa                       - Lß╗ûI (FAIL)
+Γ¥î 58. rfi                       - Lß╗ûI (FAIL)
+Γ¥î 59. smzdm                     - Lß╗ûI (HTTP_500)
+Γ¥î 60. soha                      - Lß╗ûI (HTTP_500)
+Γ£à 61. solidot                   -  20 tin
+Γ¥î 62. sputniknewscn             - Lß╗ûI (HTTP_500)
+Γ£à 63. sspai                     -  30 tin
+Γ£à 64. stackoverflow             -  30 tin
+ΓÜá∩╕Å  65. techcrunch                - 0 tin
+Γ£à 66. thanhnien                 -  30 tin
+Γ£à 67. theguardian               -  30 tin
+Γ¥î 68. thepaper                  - Lß╗ûI (HTTP_500)
+ΓÜá∩╕Å  69. thestar                   - 0 tin
+Γ¥î 70. thevietnamese             - Lß╗ûI (FAIL)
+ΓÜá∩╕Å  71. theverge                  - 0 tin
+Γ¥î 72. tieba                     - Lß╗ûI (HTTP_500)
+Γ¥î 73. tinhte                    - Lß╗ûI (FAIL)
+Γ¥î 74. toutiao                   - Lß╗ûI (HTTP_500)
+Γ£à 75. tuoitre                   -  30 tin
+Γ£à 76. v2ex                      -  30 tin
+Γ¥î 77. vietnamfinance            - Lß╗ûI (HTTP_500)
+Γ¥î 78. vietnamnet                - Lß╗ûI (HTTP_500)
+ΓÜá∩╕Å  79. vietnamnews               - 0 tin
+ΓÜá∩╕Å  80. vietstock                 - 0 tin
+Γ£à 81. vna                       -  30 tin
+Γ£à 82. vnexpress                 -  30 tin
+Γ¥î 83. vnreview                  - Lß╗ûI (HTTP_500)
+Γ¥î 84. voa                       - Lß╗ûI (FAIL)
+Γ¥î 85. wallstreetcn              - Lß╗ûI (HTTP_500)
+Γ¥î 86. weibo                     - Lß╗ûI (HTTP_500)
+Γ£à 87. wired                     -  30 tin
+Γ¥î 88. xueqiu                    - Lß╗ûI (HTTP_500)
+Γ¥î 89. zaobao                    - Lß╗ûI (HTTP_500)
+Γ¥î 90. zhihu                     - Lß╗ûI (HTTP_500)
+Γ¥î 91. zingnews                  - Lß╗ûI (HTTP_500)
+
+======================================================================
+Kß║╛T QUß║ó Tß╗öNG Hß╗óP
+======================================================================
+
+Γ£à C├ô TIN (35 nguß╗ôn):
+   anonyviet                 -  30 tin
+   bbcnews                   -  30 tin
+   cnn                       -  30 tin
+   engadget                  -  30 tin
+   genk                      -  30 tin
+   hackernews                -  30 tin
+   ithome                    -  30 tin
+   juejin                    -  30 tin
+   kuaishou                  -  30 tin
+   lemmy                     -  30 tin
+   luatkhoa                  -  30 tin
+   nld                       -  30 tin
+   plo                       -  30 tin
+   reddit-geopolitics        -  30 tin
+   reddit-programming        -  30 tin
+   reddit-science            -  30 tin
+   reddit-technology         -  30 tin
+   reddit-worldnews          -  30 tin
+   sspai                     -  30 tin
+   stackoverflow             -  30 tin
+   ... v├á 15 nguß╗ôn kh├íc
+
+ΓÜá∩╕Å  KH├öNG C├ô TIN (12 nguß╗ôn):
+   aljazeera
+   baomoi
+   cafef
+   cna
+   ictnews
+   laodong
+   lobsters
+   techcrunch
+   thestar
+   theverge
+   vietnamnews
+   vietstock
+
+Γ¥î Lß╗ûI/KH├öNG Kß║╛T Nß╗ÉI (44 nguß╗ôn):
+   24h                       - HTTP_500
+   _36kr                     - HTTP_500
+   apnews                    - FAIL
+   baidu                     - HTTP_500
+   bangkokpost               - HTTP_500
+   bilibili                  - HTTP_500
+   bloomberg                 - HTTP_500
+   cankaoxiaoxi              - HTTP_500
+   chongbuluo                - HTTP_500
+   dantri                    - HTTP_500
+   douyin                    - HTTP_500
+   fastbull                  - HTTP_500
+   gelonghui                 - HTTP_500
+   ghxi                      - HTTP_500
+   hupu                      - HTTP_500
+   ... v├á 29 nguß╗ôn kh├íc
+
+======================================================================
+Tß╗òng cß╗Öng:        91 nguß╗ôn
+Γ£à C├│ tin:        35 (38.5%)
+ΓÜá∩╕Å  Kh├┤ng c├│ tin:  12 (13.2%)
+Γ¥î Lß╗ùi:           44 (48.4%)
+======================================================================
+
+≡ƒôì NGUß╗ÆN TIN VIß╗åT NAM:
+   Tß╗òng:          11 nguß╗ôn
+   Γ£à C├│ tin:      5 nguß╗ôn
+   ΓÜá∩╕Å  Kh├┤ng tin:   2 nguß╗ôn
+   Γ¥î Lß╗ùi:         4 nguß╗ôn
+
+   Nguß╗ôn VN hoß║ít ─æß╗Öng: anonyviet, bbcvietnamese, redditvietnam, vna, vnexpress
+   Nguß╗ôn VN kh├┤ng tin: vietnamnews, vietstock
+   Nguß╗ôn VN lß╗ùi: thevietnamese, vietnamfinance, vietnamnet, vnreview
+======================================================================

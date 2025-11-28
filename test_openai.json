@@ -1,0 +1,10 @@
+{
+    "model": "gpt-3.5-turbo",
+    "messages": [
+        {
+            "role": "user",
+            "content": "Translate to Vietnamese: Hello, this is a test message"
+        }
+    ],
+    "temperature": 0.3
+}

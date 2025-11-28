@@ -1,0 +1,132 @@
+================================================================================
+COMPREHENSIVE NewsNow Source Test
+================================================================================
+Base URL: http://localhost:5173/api
+Total sources: 91
+================================================================================
+
+Testing all sources (this will take a while)...
+
+Progress: 10/91 tested...
+Progress: 20/91 tested...
+Progress: 30/91 tested...
+Progress: 40/91 tested...
+Progress: 50/91 tested...
+Progress: 60/91 tested...
+Progress: 70/91 tested...
+Progress: 80/91 tested...
+Progress: 90/91 tested...
+
+================================================================================
+RESULTS
+================================================================================
+
+Γ£à WORKING (35):
+   anonyviet                 -  30 items
+   bbcnews                   -  30 items
+   cnn                       -  30 items
+   engadget                  -  30 items
+   genk                      -  30 items
+   hackernews                -  30 items
+   ithome                    -  30 items
+   juejin                    -  30 items
+   kuaishou                  -  30 items
+   lemmy                     -  30 items
+   luatkhoa                  -  30 items
+   nld                       -  30 items
+   plo                       -  30 items
+   reddit-geopolitics        -  30 items
+   reddit-programming        -  30 items
+   reddit-science            -  30 items
+   reddit-technology         -  30 items
+   reddit-worldnews          -  30 items
+   sspai                     -  30 items
+   stackoverflow             -  30 items
+   thanhnien                 -  30 items
+   theguardian               -  30 items
+   tuoitre                   -  30 items
+   v2ex                      -  30 items
+   vna                       -  30 items
+   vnexpress                 -  30 items
+   wired                     -  30 items
+   bbcvietnamese             -  26 items
+   cnet                      -  25 items
+   redditvietnam             -  25 items
+   arstechnica               -  20 items
+   coolapk                   -  20 items
+   pcbeta                    -  20 items
+   solidot                   -  20 items
+   github                    -  18 items
+
+ΓÜá∩╕Å  ZERO ITEMS (13):
+   aljazeera
+   baomoi
+   cafef
+   cna
+   ictnews
+   laodong
+   lobsters
+   techcrunch
+   thestar
+   theverge
+   tinhte
+   vietnamnews
+   vietstock
+
+Γ¥î BROKEN (43):
+   24h                       - HTTP_500
+   _36kr                     - HTTP_500
+   apnews                    - HTTP_500
+   baidu                     - HTTP_500
+   bangkokpost               - HTTP_500
+   bilibili                  - HTTP_500
+   bloomberg                 - HTTP_500
+   cankaoxiaoxi              - HTTP_500
+   chongbuluo                - HTTP_500
+   dantri                    - HTTP_500
+   douyin                    - HTTP_500
+   fastbull                  - HTTP_500
+   gelonghui                 - HTTP_500
+   ghxi                      - HTTP_500
+   hupu                      - HTTP_500
+   ifeng                     - HTTP_500
+   jin10                     - HTTP_500
+   kaopu                     - HTTP_500
+   kenh14                    - HTTP_500
+   linuxdo                   - HTTP_500
+   mktnews                   - HTTP_500
+   nowcoder                  - HTTP_500
+   producthunt               - HTTP_500
+   reuters                   - HTTP_500
+   rfa                       - HTTP_500
+   rfi                       - HTTP_500
+   smzdm                     - HTTP_500
+   soha                      - HTTP_500
+   sputniknewscn             - HTTP_500
+   thepaper                  - HTTP_500
+   thevietnamese             - HTTP_500
+   tieba                     - HTTP_500
+   toutiao                   - HTTP_500
+   vietnamfinance            - HTTP_500
+   vietnamnet                - HTTP_500
+   vnreview                  - HTTP_500
+   voa                       - HTTP_500
+   wallstreetcn              - HTTP_500
+   weibo                     - HTTP_500
+   xueqiu                    - HTTP_500
+   zaobao                    - HTTP_500
+   zhihu                     - HTTP_500
+   zingnews                  - HTTP_500
+
+================================================================================
+SUMMARY
+================================================================================
+Working (with items):   35 / 91
+Zero items:             13 / 91
+Broken/Error:           43 / 91
+Success rate:          38.5%
+================================================================================
+
+Vietnamese sources: 11
+Vietnamese working: 5
+Vietnamese sources: anonyviet, bbcvietnamese, redditvietnam, thevietnamese, vietnamfinance, vietnamnet, vietnamnews, vietstock, vna, vnexpress, vnreview
