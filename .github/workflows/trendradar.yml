@@ -39,7 +39,7 @@ jobs:
       
       - name: Upload artifacts (HTML reports)
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: news-reports-${{ github.run_number }}
           path: output/
