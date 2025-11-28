@@ -93,29 +93,55 @@ weight:
 
 # name có thể đặt tên tùy ý, chỉ có tác dụng hiển thị, ngay cả khi dự án chạy vài ngày rồi mà đột nhiên đổi name cũng không ảnh hưởng đến hoạt động của code
 platforms:
-  - id: "toutiao"
-    name: "今日头条"
-  - id: "baidu"
-    name: "百度热搜"
-  - id: "wallstreetcn-hot"
-    name: "华尔街见闻"
-  - id: "thepaper"
-    name: "澎湃新闻"
-  - id: "bilibili-hot-search"
-    name: "bilibili 热搜"
-  - id: "cls-hot"
-    name: "财联社热门"
-  - id: "ifeng"
-    name: "凤凰网"
-  - id: "tieba"
-    name: "贴吧"
-  - id: "weibo"
-    name: "微博"
-  - id: "douyin"
-    name: "抖音"
-  - id: "zhihu"
-    name: "知乎"
+  # Vietnamese sources - primary
   - id: "vnexpress"
-    name: "VnExpress"
+    name: "📰 VnExpress"
+  
   - id: "tuoitre"
-    name: "Tuổi Trẻ"
+    name: "📰 Tuổi Trẻ"
+  
+  - id: "thanhnien"
+    name: "📰 Thanh Niên"
+  
+  - id: "vietnamnet"
+    name: "📰 VietnamNet"
+  
+  - id: "bbcvietnamese"
+    name: "🌐 BBC Vietnamese"
+  
+  - id: "redditvietnam"
+    name: "🔥 Reddit Vietnam"
+  
+  # Tech sources (global)
+  - id: "hackernews"
+    name: "💻 Hacker News"
+  
+  - id: "github-trending-today"
+    name: "💻 GitHub Trending"
+  
+  # International News
+  - id: "reuters"
+    name: "🌍 Reuters"
+  
+  - id: "bbcnews"
+    name: "🌍 BBC News"
+  
+  - id: "theguardian"
+    name: "🌍 The Guardian"
+  
+  - id: "cnn"
+    name: "🌍 CNN"
+  
+  # Tech News
+  - id: "techcrunch"
+    name: "💻 TechCrunch"
+  
+  - id: "theverge"
+    name: "💻 The Verge"
+  
+  # Community
+  - id: "reddit-worldnews"
+    name: "🔥 r/worldnews"
+  
+  - id: "reddit-technology"
+    name: "🔥 r/technology"
