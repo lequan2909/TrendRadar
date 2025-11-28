@@ -1,0 +1,45 @@
+name: TrendRadar News Aggregator
+
+on:
+  schedule:
+    # Chạy mỗi giờ (minute 0 của mỗi giờ)
+    - cron: '0 * * * *'
+  
+  workflow_dispatch: # Cho phép chạy manual từ GitHub UI
+
+jobs:
+  fetch-news:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: vietnam-sources # Sử dụng branch với 63 sources
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      
+      - name: Run TrendRadar
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          REPORT_MODE: incremental # Chỉ gửi tin mới
+          ENABLE_CRAWLER: true
+          ENABLE_NOTIFICATION: true
+        run: |
+          python main.py
+      
+      - name: Upload artifacts (HTML reports)
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: news-reports-${{ github.run_number }}
+          path: output/
+          retention-days: 7
