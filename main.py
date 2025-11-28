@@ -478,7 +478,11 @@ class DataFetcher:
             id_value = id_info
             alias = id_value
 
-        url = f"http://localhost:5173/api/s?id={id_value}&latest"
+
+        # Get Newsnow API URL from environment variable
+        newsnow_api_url = os.getenv('NEWSNOW_API_URL', 'http://localhost:5173/api')
+        url = f"{newsnow_api_url}/s?id={id_value}&latest"
+
 
         proxies = None
         if self.proxy_url:
